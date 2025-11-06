@@ -555,6 +555,112 @@
   transition: 0.3s;
 }
 
+.author {
+  position: fixed;
+  bottom: 5%;
+  right: 2%;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+.author_logo {
+  background-color: #464b65;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.author_border {
+  border-radius: 50%;
+  width: 90%;
+  height: 90%;
+  border: 3px solid #969bb6;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  animation-name: aylan;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  transform: rotate(0deg);
+}
+
+.author_border_cutter {
+  width: 100%;
+  height: 30%;
+  background-color: #464b65;
+  position: absolute;
+  top: 35%;
+  animation-name: aylan;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  transform: rotate(0deg);
+}
+
+.author_img {
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 10%;
+}
+
+.author_logo input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.author_img img {
+  width: 100%;
+}
+
+@keyframes aylan {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.author:has(input:checked) .author_text {
+  width: 270px;
+  opacity: 1;
+}
+
+.author:has(input:checked) .author_border_cutter {
+  display: none;
+}
+
+.author_text {
+  display: flex;
+  flex-direction: column;
+  width: 0px;
+  background-color: #697096;
+  transition: 0.5s;
+  opacity: 0;
+  padding: 10px 0px 10px 15px;
+  border-radius: 25px 0px 0px 25px;
+  margin-right: -20px;
+}
+
+.author_text span {
+  font-weight: 300;
+}
+
+.author_text h3 a {
+  color: black;
+  text-decoration: underline;
+}
+
 @media (max-width: 1024px) {
   .bars {
     display: flex;
@@ -629,110 +735,118 @@
     padding-left: 20px;
   }
 
-  .footer_box{
+  .footer_box {
     padding: 0px 100px;
   }
 
-  .footer_input a{
+  .footer_input a {
     padding: 13px 15px;
   }
 
-  .last_box{
+  .last_box {
     padding: 230px 5% 0px;
   }
 
-  .last_div1{
+  .last_div1 {
     padding-right: 0px;
   }
 }
 
 @media (max-width: 767px) {
-  .navbar ul li{
+  .navbar ul li {
     margin-left: 10px;
   }
 
-  .navbar_menu li{
+  .navbar_menu li {
     margin-left: 50px;
   }
 
-  .bars{
+  .bars {
     margin-left: 10px;
   }
 
-  .navbar{
+  .navbar {
     margin-bottom: 100px;
   }
 
-  .main_top_text h1{
+  .main_top_text h1 {
     font-size: 40px;
     line-height: 50px;
     margin-bottom: 10px;
   }
 
-  .main_top_text p{
+  .main_top_text p {
     margin-bottom: 15px;
   }
 
-  .main_top_text{
+  .main_top_text {
     width: 90%;
   }
 
-  .discount .discount_col:nth-child(odd){
+  .discount .discount_col:nth-child(odd) {
     display: none;
   }
 
-  .discount_col{
+  .discount_col {
     width: 100%;
   }
 
-  .discount{
+  .discount {
     margin-bottom: 80px;
   }
 
-  .card_space{
+  .card_space {
     width: 100%;
     padding: 15px 20px;
   }
 
-  .m_box{
+  .m_box {
     flex-direction: column;
   }
 
-  .img, .m_content{
+  .img,
+  .m_content {
     width: 100%;
     padding: 0px;
   }
 
-  .img1, .img3, .m_content2{
+  .img1,
+  .img3,
+  .m_content2 {
     padding-bottom: 20px;
   }
 
-  .footer_box{
+  .footer_box {
     padding: 0px 5%;
   }
 
-  .footer_content{
+  .footer_content {
     width: 90%;
   }
 
-  .footer_input div{
+  .footer_input div {
     width: 90%;
   }
 
-  .last_box{
+  .last_box {
     height: auto;
   }
 
-  .last_div1{
+  .last_div1 {
     flex-direction: column;
     padding-bottom: 40px;
   }
 
-  .last_contact{
+  .last_contact {
     margin-top: 20px;
   }
 
-  .footer_icons{
+  .footer_icons {
     padding-bottom: 30px;
+  }
+
+  .author_logo {
+    width: 70px;
+    height: 70px;
   }
 }
