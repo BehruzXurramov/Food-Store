@@ -633,7 +633,6 @@
 
 .author:has(input:checked) .author_text {
   width: 270px;
-  opacity: 1;
 }
 
 .author:has(input:checked) .author_border_cutter {
@@ -646,10 +645,11 @@
   width: 0px;
   background-color: #697096;
   transition: 0.5s;
-  opacity: 0;
   padding: 10px 0px 10px 15px;
   border-radius: 25px 0px 0px 25px;
   margin-right: -20px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .author_text span {
